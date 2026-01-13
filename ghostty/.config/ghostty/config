@@ -1,0 +1,46 @@
+font-family = "DejaVu Sans Mono"
+font-size = 15
+theme = "GruvboxDarkHard"
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+adjust-cell-height = 15%
+background-opacity = 0.98
+
+window-padding-x = 0
+window-padding-y = 0
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 4
+
+window-padding-balance = true
+window-save-state = always
+# window-colorspace = "display-p3"
+window-decoration = none
+background = 282828
+foreground = d4be98
+copy-on-select = clipboard
+
+# keybindings
+keybind = ctrl+shift+w=close_surface
+
+# tabs
+# keybind = ctrl+->c=new_tab
+# keybind = ctrl+->shift+l=next_tab
+# keybind = ctrl+->shift+h=previous_tab
+# keybind = ctrl+->comma=move_tab:-1
+# keybind = ctrl+->period=move_tab:1
+
+# split
+# keybind = ctrl+->\=new_split:right
+# keybind = ctrl+->-=new_split:down
+# keybind = ctrl+shift+j=goto_split:bottom
+# keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+j=scroll_page_down
+keybind = ctrl+shift+k=scroll_page_up
+# keybind = ctrl+->z=toggle_splits
+# keybind = ctrl+->e=equalize_splits
+app-notifications = no-clipboard-copy
+confirm-close-surface = false
+keybind = shift+enter=text:\n

@@ -1,0 +1,291 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "stream_edits": true,
+    "play_sound_when_agent_done": true,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "version": "2"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://156.4.10.29:11435",
+      "available_models": [
+        {
+          "name": "devstral:24b",
+          "display_name": "devstral",
+          "max_tokens": 131072,
+          "supports_tools": true,
+          "supports_thinking": false,
+          "supports_images": false
+        }
+      ]
+    }
+  },
+  "edit_predictions": {
+    "disabled_globs": ["secret_dir/*", "**/*.log"]
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "terminal": {
+    "shell": "system",
+    "default_height": 600,
+    "copy_on_select": true,
+    "alternate_scroll": "on",
+    "scrollbar": {
+      "show": "always"
+    }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "buffer_font_family": "DejaVu Sans Mono",
+  "vim_mode": true,
+  "vim": {
+    "default_mode": "normal",
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": false,
+    "highlight_on_yank_duration": 200,
+    "custom_digraphs": {},
+    "cursor_shape": {}
+  },
+  "ui_font_size": 22,
+  "buffer_font_size": 20,
+  "agent_font_size": 25,
+  "active_pane_modifiers": {
+    // Inset border size of the active pane, in pixels.
+    "border_size": 0.0,
+    "inactive_opacity": 0.9
+  },
+  "bottom_dock_layout": "left_aligned",
+  "pane_split_direction_vertical": "right",
+  "hide_mouse": "on_typing_and_movement",
+  "gutter": {
+    "line_numbers": true,
+    "code_actions": false,
+    "runnables": false,
+    "folds": false
+  },
+  "restore_on_startup": "last_session",
+  "inline_code_actions": true,
+  "auto_signature_help": true,
+  "title_bar": {
+    // Whether to show the branch icon beside branch switcher in the titlebar.
+    "show_branch_icon": false,
+    // Whether to show the branch name button in the titlebar.
+    "show_branch_name": true,
+    // Whether to show the project host and name in the titlebar.
+    "show_project_items": true,
+    // Whether to show onboarding banners in the titlebar.
+    "show_onboarding_banner": true,
+    // Whether to show user picture in the titlebar.
+    "show_user_picture": false,
+    // Whether to show the sign in button in the titlebar.
+    "show_sign_in": true
+  },
+  // Scrollbar related settings
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_text": true,
+    "selected_symbol": true,
+    "diagnostics": "all",
+    "axes": {
+      "horizontal": true,
+      "vertical": true
+    }
+  },
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "vertical_scroll_margin": 3,
+  "use_smartcase_search": false,
+  "project_panel": {
+    // Whether to show the project panel button in the status bar
+    "button": true,
+    // Whether to hide the gitignore entries in the project panel.
+    "hide_gitignore": false,
+    // Default width of the project panel.
+    "default_width": 280,
+    "dock": "left",
+    "entry_spacing": "standard",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_size": 30,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "scrollbar": {
+      "show": null
+    }
+  },
+  // I dont understand it, might not work with vim
+  "slash_commands": {
+    "docs": {
+      "enabled": false
+    },
+    "project": {
+      "enabled": false
+    }
+  },
+  "journal": {
+    "path": "~",
+    "hour_format": "hour24"
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Dark",
+    "dark": "Gruvbox Dark"
+  },
+  "diagnostics": {
+    // Whether to show the project diagnostics button in the status bar.
+    "button": true,
+    // Whether to show warnings or not by default.
+    "include_warnings": true,
+    // Settings for inline diagnostics
+    "inline": {
+      // Whether to show diagnostics inline or not
+      "enabled": true,
+      // The delay in milliseconds to show inline diagnostics after the
+      // last diagnostic update.
+      "update_debounce_ms": 150,
+      // The amount of padding between the end of the source line and the start
+      // of the inline diagnostic in units of em widths.
+      "padding": 4,
+      // The minimum column to display inline diagnostics. This setting can be
+      // used to horizontally align inline diagnostics at some column. Lines
+      // longer than this value will still push diagnostics further to the right.
+      "min_column": 0,
+      // The minimum severity of the diagnostics to show inline.
+      // Inherits editor's diagnostics' max severity settings when `null`.
+      "max_severity": null
+    }
+  },
+  "inlay_hints": {
+    // Global switch to toggle hints on and off, switched off by default.
+    "enabled": true,
+    // Toggle certain types of hints on and off, all switched on by default.
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    // Corresponds to null/None LSP hint type value.
+    "show_other_hints": true,
+    // Whether to show a background for inlay hints.
+    //
+    // If set to `true`, the background will use the `hint.background` color from the current theme.
+    "show_background": false,
+    // Time to wait after editing the buffer, before requesting the hints,
+    // set to 0 to disable debouncing.
+    "edit_debounce_ms": 700,
+    // Time to wait after scrolling the buffer, before requesting the hints,
+    // set to 0 to disable debouncing.
+    "scroll_debounce_ms": 50,
+    // A set of modifiers which, when pressed, will toggle the visibility of inlay hints.
+    // If the set if empty or not all the modifiers specified are pressed, inlay hints will not be toggled.
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "shift": false,
+      "alt": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  // Set a proxy to use. The proxy protocol is specified by the URI scheme.
+  //
+  // Supported URI scheme: `http`, `https`, `socks4`, `socks4a`, `socks5`,
+  // `socks5h`. `http` will be used when no scheme is specified.
+  //
+  // By default no proxy will be used, or Zed will try get proxy settings from
+  // environment variables.
+  //
+  // Examples:
+  //   - "proxy": "socks5h://localhost:10808"
+  //   - "proxy": "http://127.0.0.1:10809"
+  "proxy": null,
+  // Set to configure aliases for the command palette.
+  // When typing a query which is a key of this object, the value will be used instead.
+  //
+  // Examples:
+  // {
+  //   "W": "workspace::Save"
+  // }
+  "command_aliases": {},
+  // ssh_connections is an array of ssh connections.
+  // You can configure these from `project: Open Remote` in the command palette.
+  // Zed's ssh support will pull configuration from your ~/.ssh too.
+  // Examples:
+  // [
+  //   {
+  //     "host": "example-box",
+  //     // "port": 22, "username": "test", "args": ["-i", "/home/user/.ssh/id_rsa"]
+  //     "projects": [
+  //       {
+  //         "paths": ["/home/user/code/zed"]
+  //       }
+  //     ]
+  //   }
+  // ]
+  "ssh_connections": [],
+  // Whether to read ~/.ssh/config for ssh connection sources.
+  "read_ssh_config": true,
+
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "pyright"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+
+  "lsp": {
+    // Specify the LSP name as a key here.
+    // "rust-analyzer": {
+    //     // A special flag for rust-analyzer integration, to use server-provided tasks
+    //     enable_lsp_tasks": true,
+    //     // These initialization options are merged into Zed's defaults
+    //     "initialization_options": {
+    //         "check": {
+    //             "command": "clippy" // rust-analyzer.check.command (default: "check")
+    //         }
+    //     }
+    // }
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          // Ruff server settings goes here
+          "lineLength": 80,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    }
+  }
+}

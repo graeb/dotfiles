@@ -1,0 +1,40 @@
+# --- Zsh / Antidote ---
+zsh/.antidote/             # External plugin manager source
+zsh/.zsh_plugins.zsh       # Generated static plugin file
+.zsh_history               # Never commit your command history
+.zsh_sessions/             # macOS specific shell sessions
+
+# --- Neovim (NVIM) ---
+nvim/.netrwhist            # Netrw history
+nvim/undo/                 # Undo history files
+nvim/shada/                # Shared data (registers, search history)
+# If using Lazy.nvim, ignore the installed plugins
+nvim/lazy-lock.json        # KEEP this (it locks plugin versions)
+nvim/lazy/                 # IGNORE this (the actual plugin code)
+
+# --- Zellij / Starship ---
+zellij/cache/              # Zellij layouts/cache
+
+# --- General System / IDE Junk ---
+.DS_Store                  # macOS junk
+*.log                      # Error logs
+*.tmp                      # Temporary files
+node_modules/              # If any config uses JS tools
+__pycache__/               # Python cache
+
+# --- Secrets (CRITICAL) ---
+.zshrc_secrets             # Local file for API keys/tokens
+.netrc                     # Machine-readable login info
+*.gpg                      # Encrypted files (unless you want them in git)
+ssh/id_* # NEVER commit private SSH keys
+*token*
+*secret*
+*.key
+*.pem
+*.log
+
+# --- Ignore large/local state inside stowed folders
+**/cache/
+**/logs/
+**/*.bak
+**/*.tmp

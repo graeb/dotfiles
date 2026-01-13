@@ -1,0 +1,113 @@
+[
+  {
+    "context": "!showing_completions",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-e": "editor::AcceptEditPrediction",
+      "ctrl-n": "editor::MoveDown",
+      "ctrl-p": "editor::MoveUp",
+
+      // "shift-k": "editor::ShowSignatureHelp",
+
+      // These insane bindings are just to sending keystrokes
+      "shift-alt h": "workspace::ToggleLeftDock",
+      "shift-alt l": "workspace::ToggleRightDock",
+      "shift-alt j": "workspace::ToggleBottomDock",
+      "shift-alt e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !AgentPanel",
+    "bindings": {
+      // Move lines like <A-j>/<A-k>
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+
+      "shift-k": "editor::Hover",
+
+      // Buffer/tab navigation: shift-h / shift-l
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+
+      // Treesitter/AST selection
+      // "ctrl-space": "editor::SelectLargerSyntaxNode",
+      // "alt-shift-left": "editor::SelectSmallerSyntaxNode",
+
+      // === Open Panels ===
+      "space g": "git_panel::ToggleFocus",
+      "space e": "project_panel::ToggleFocus",
+      "space t": "terminal_panel::ToggleFocus",
+      "space o": "outline::Toggle",
+      "ctrl-/": "terminal_panel::ToggleFocus",
+      "space a": "agent::ToggleFocus",
+      "space i": "diagnostics::Deploy",
+      "space c": "collab::ToggleUserMenu",
+      "space d": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space p": "pane::TogglePinTab",
+
+      // === Close Specific Docks ===
+      // "space e": ["workspace::SendKeystrokes", "shift-alt h shift-alt e"],
+      // "space q l": "workspace::ToggleRightDock",
+      // "space q j": "workspace::ToggleBottomDock",
+      "space q": "workspace::CloseAllDocks",
+
+      // "Leader" style via space-prefixed two-key combos
+      "space space": "file_finder::Toggle",
+      "space f": "file_finder::Toggle",
+      "space r": "editor::FindAllReferences",
+      "space s": "buffer_search::Deploy", // same as / in vim mode so we might replace it
+      "space k": "editor::Hover" // <leader>K (hover LSP)
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-h": null,
+      "ctrl-l": null
+    }
+  },
+  {
+    "context": "!Terminal",
+    "bindings": {
+      "ctrl-shift-c": null
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "q": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "space g": "workspace::ToggleLeftDock",
+      "q": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "vim_mode == normal && AgentPanel",
+    "bindings": {
+      "space a": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "ctrl-l": "terminal::Clear"
+      // "q": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Diagnostics",
+    "bindings": {
+      "q": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space d": ["pane::CloseActiveItem", { "close_pinned": false }]
+    }
+  }
+]

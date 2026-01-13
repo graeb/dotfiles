@@ -1,0 +1,12 @@
+# 1. Core Oh My Zsh Library (Needed for themes/plugins to work)
+ohmyzsh/ohmyzsh path:lib
+
+# 2. Oh My Zsh Plugins (Load only what you actually use)
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+# 3. High-Performance Community Plugins
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
